@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
-    var topics = ["babies", "viral", "Bradley Cooper"];
+    var topicsArray = ["babies", "viral", "Bradley Cooper"];
 
         // start butt
         
         function startButtons() {
             $("buttons").empty();
             
-            for(let i = 0; i < topics.length; i++) {
+            for(let i = 0; i < topicsArray.length; i++) {
                 var btn = $("<button>");
                 btn.addClass("topics");
-                btn.attr("data-name", topics[i]);
-                btn.text(topics[i]);
+                btn.attr("data-name", topicsArray[i]);
+                btn.text(topicsArray[i]);
                 $("#buttons").append(btn);
             }
         };
@@ -37,8 +37,28 @@ $(document).ready(function() {
         }
         })
 
-        $(document).on("click", ".")
-        
+        $(document).on("click", ".topicsArray", function ()  {
+            var topic = $(this).attr("data-name");
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&rating=g&limit=10&api_key=Ft13wX9WzE2SEzWITz194WdyaJsf8hhT"
+
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            }).then(function (response) {
+                console.log(response);
+
+                var results = response.data;
+
+
+                for (var i = 0; i < results.length; i++) {
+                    var dataImage =  $("<img>");
+                    
+                }
+            }
+
+
+
 
 
 // Ft13wX9WzE2SEzWITz194WdyaJsf8hhT
