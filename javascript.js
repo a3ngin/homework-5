@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     });
 
-    $(document).on("click", ".topicsClass", function() {
+    $(document).on("click", ".topicsClass", function () {
         var topic = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Ft13wX9WzE2SEzWITz194WdyaJsf8hhT&q=" + topic + "&limit=10&offset=0&rating=G&lang=en";
 
@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 
 
-      //  https://api.giphy.com/v1/gifs/search?api_key=Ft13wX9WzE2SEzWITz194WdyaJsf8hhT&q=viral&limit=10&offset=0&rating=G&lang=en
+        //  https://api.giphy.com/v1/gifs/search?api_key=Ft13wX9WzE2SEzWITz194WdyaJsf8hhT&q=viral&limit=10&offset=0&rating=G&lang=en
 
         // API key
         // Ft13wX9WzE2SEzWITz194WdyaJsf8hhT
@@ -84,21 +84,6 @@ $(document).ready(function () {
         });
     });
     startButtons(topicsArray, "#buttons");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 });
